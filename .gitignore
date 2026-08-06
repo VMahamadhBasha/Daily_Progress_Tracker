@@ -1,0 +1,21 @@
+# IDE settings
+.vscode/
+.idea/
+*.iml
+*.log
+
+# Backend exclusions
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+apache-maven-3.9.6/
+
+# Frontend exclusions
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# OS files
+.DS_Store
+Thumbs.db

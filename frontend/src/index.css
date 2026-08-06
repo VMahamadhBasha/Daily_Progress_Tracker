@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-violet-500 selection:text-white;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* React Calendar Premium Styles Override */
+.react-calendar {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: rgba(15, 23, 42, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 1rem !important;
+  font-family: inherit !important;
+  padding: 1.25rem !important;
+  color: #f1f5f9 !important;
+}
+
+.react-calendar__navigation {
+  display: flex !important;
+  height: 48px !important;
+  margin-bottom: 1rem !important;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px !important;
+  background: none !important;
+  border: none !important;
+  color: #f1f5f9 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  color: #94a3b8 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5rem !important;
+}
+
+.react-calendar__month-view__days__day {
+  aspect-ratio: 1 !important;
+  background: none !important;
+  border: 0 !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #cbd5e1 !important;
+  border-radius: 0.75rem !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  margin: 2px 0 !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #475569 !important;
+}
+
+/* Custom coloring indicators for calendar days */
+.cal-good {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  color: #34d399 !important;
+  font-weight: 700 !important;
+}
+
+.cal-partial {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  color: #fbbf24 !important;
+  font-weight: 700 !important;
+}
+
+.cal-none {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  color: #f87171 !important;
+}
+
+/* Default day highlight when clicked/selected */
+.react-calendar__tile--active {
+  background: rgba(139, 92, 246, 0.25) !important;
+  border: 2px solid #8b5cf6 !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Remove default active tile blue */
+.react-calendar__tile--hasActive {
+  background: rgba(139, 92, 246, 0.2) !important;
+}
